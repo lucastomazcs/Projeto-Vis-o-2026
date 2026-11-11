@@ -1,0 +1,27 @@
+# Kaggle credentials and local secrets
+kaggle.json
+.env
+.env.*
+*.pem
+*.key
+
+# Downloaded dataset and model artifacts
+archive*.zip
+Brain_Stroke_CT_Dataset/
+brain-stroke-ct-dataset/
+dataset/
+data/
+*.pt
+*.pth
+*.onnx
+
+# Logs and generated figures
+logs/
+*_logs/
+prediction_examples_test.*
+gradcam_exemplos_teste.*
+
+# Python and notebook runtime files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
