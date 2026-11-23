@@ -8,6 +8,7 @@ Projeto acadêmico de visão computacional para classificar imagens de tomografi
 
 - **Notebook final executado no Google Colab:** [abrir notebook](https://colab.research.google.com/drive/1MlmlqNdRhDE403TT9m_Il0BspzX6sLsz)
 - **Código do notebook no GitHub:** [brain_stroke_ct_sin393.ipynb](./brain_stroke_ct_sin393.ipynb)
+- **Artigo da disciplina (PDF):** [baixar artigo](./Artigo_Disciplina_Visao_Computacional.pdf)
 - **Dataset:** [Brain Stroke CT Dataset — Kaggle](https://www.kaggle.com/datasets/ozguraslank/brain-stroke-ct-dataset)
 - **Vídeo de apresentação:** [assistir no YouTube](https://youtu.be/P9x4yA63nDY)
 
