@@ -25,3 +25,6 @@ O token Kaggle deve permanecer nos Secrets/runtime do Colab; não o grave neste 
 ## Limites
 
 Trabalho acadêmico de classificação de imagens; não se destina a diagnóstico ou decisão clínica. Sem metadados de paciente, duplicatas parecidas ou estudos relacionados, a separação por imagem pode ter vazamento e isso deve constar nas limitações. Não faça upload de imagens clínicas privadas.
+
+## Link Apresentação
+https://youtu.be/P9x4yA63nDY
