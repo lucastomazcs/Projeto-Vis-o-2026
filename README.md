@@ -7,11 +7,11 @@ Projeto acadêmico de visão computacional para classificar imagens de tomografi
 ## Acesso ao projeto
 
 - **Notebook final executado no Google Colab:** [abrir notebook](https://colab.research.google.com/drive/1MlmlqNdRhDE403TT9m_Il0BspzX6sLsz)
-- **Notebook de referência versionado neste repositório:** [brain_stroke_ct_sin393.ipynb](./brain_stroke_ct_sin393.ipynb)
+- **Código do notebook no GitHub:** [brain_stroke_ct_sin393.ipynb](./brain_stroke_ct_sin393.ipynb)
 - **Dataset:** [Brain Stroke CT Dataset — Kaggle](https://www.kaggle.com/datasets/ozguraslank/brain-stroke-ct-dataset)
 - **Vídeo de apresentação:** [assistir no YouTube](https://youtu.be/P9x4yA63nDY)
 
-O notebook final no Colab é a referência para a execução do experimento. O arquivo `.ipynb` deste repositório é uma cópia inicial do fluxo experimental; consulte o notebook do Colab para a versão executada e seus registros mais recentes.
+O notebook no GitHub contém o código e os resultados salvos na execução. O link do Colab permite abrir a versão utilizada no ambiente remoto; as células finais de auditoria podem precisar de nova autorização para montar o Google Drive.
 
 ## Pergunta experimental
 
@@ -45,13 +45,13 @@ Na avaliação registrada para a **ResNet-18 com aumento de dados**, a acurácia
 ## Como executar
 
 1. Abra o [notebook final no Google Colab](https://colab.research.google.com/drive/1MlmlqNdRhDE403TT9m_Il0BspzX6sLsz) e faça uma cópia para sua conta, se necessário.
-2. No menu **Ambiente de execução → Alterar tipo de ambiente de execução**, selecione uma GPU oferecida pelo Colab, se disponível. O tipo de acelerador depende da disponibilidade e da conta. O notebook também pode executar em CPU do runtime remoto, com maior tempo de processamento.
-3. Disponibilize o dataset do Kaggle conforme a célula de preparação dos dados do notebook. Se a conta exigir autenticação, configure `KAGGLE_API_TOKEN` em **Secrets** do Colab e permita o acesso pelo notebook. Nunca cole ou versione tokens.
+2. No menu **Ambiente de execução → Alterar tipo de ambiente de execução**, selecione uma GPU oferecida pelo Colab, se disponível. O tipo de acelerador depende da disponibilidade e da conta. O notebook usa os recursos do runtime remoto, não os recursos locais.
+3. Coloque o arquivo ZIP do dataset na raiz do **Meu Drive** com o nome `archive(1).zip`, como esperado por `ZIP_PATH` no notebook, ou altere essa variável para o caminho correto. Autorize a montagem do Google Drive quando solicitado; o código extrai os dados em `/content` no runtime Colab.
 4. Execute as células em ordem. Revise a auditoria de imagens, rótulos, arquivos de metadados e possíveis identificadores de paciente/estudo antes de treinar.
 5. Se houver identificadores de paciente ou estudo, use uma divisão agrupada antes do treinamento para evitar que imagens do mesmo grupo apareçam em partições distintas. Não confirme ausência desses identificadores sem verificar os metadados.
 6. Execute o treinamento das quatro condições e, após congelar o protocolo, faça a avaliação final no teste. Consulte os resultados, matrizes de confusão, exemplos qualitativos e registros gerados pelo notebook.
 
-O notebook instala as dependências Python necessárias no runtime, incluindo PyTorch/`torchvision`, KaggleHub, scikit-learn, pandas, Pillow e tqdm. A sessão de Colab precisa de acesso ao dataset e pode ser encerrada pelo serviço; salve os artefatos de interesse no Google Drive ao final.
+O notebook instala `kaggle`, scikit-learn, pandas, Pillow e tqdm. PyTorch, `torchvision`, NumPy e Matplotlib são usados no runtime Colab. A execução também grava auditorias, partições, métricas, históricos, checkpoints e figuras na pasta `Brain_Stroke_CT_SIN393_logs` do Google Drive; salve os artefatos necessários, pois sessões do Colab podem ser encerradas.
 
 ## Reprodutibilidade e limitações
 
